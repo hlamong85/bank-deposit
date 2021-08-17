@@ -26,4 +26,30 @@ document.getElementById('deposit').addEventListener('click', function () {
 
 
     // console.log(showTextAmount);
+});
+//withdraw event handler
+document.getElementById('withdraw').addEventListener('click', function () {
+    const withdrawInput = document.getElementById('withdraw-amount');
+    const showWithdraw = withdrawInput.value;
+    // console.log(showWithdraw);
+    // ...........
+    const withdrawText = document.getElementById('withdraw-total');
+    const showWithdrawText = withdrawText.innerText;
+    console.log(showWithdrawText);//current value;
+    const currentwWithdraw = parseFloat(showWithdrawText);
+    const previousWithdraw = parseFloat(showWithdraw);
+    const getTotalWithdraw = currentwWithdraw + previousWithdraw;
+    withdrawText.innerText = getTotalWithdraw;
+
+    // withdrawText.innerText = showWithdraw;//show current text value
+    //current amount
+
+    withdrawInput.value = '';
+    //update balance
+
+
+
+
+
+
 })
